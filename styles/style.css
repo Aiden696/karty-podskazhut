@@ -17,7 +17,7 @@
   margin: 0;
   background-color: var(--bg-color, #F3EFEC);
   color: var(--text-color, #312A4E);
-  font-family: var(--main-font, Raleway, sans-serif);
+  font-family: var(--main-font, sans-serif);
 }
 
 p,
@@ -43,7 +43,7 @@ figure {
 }
 
 .heading {
-  font-family: var(--accent-font, 'STIX Two Text', serif);
+  font-family: var(--accent-font, serif);
   font-weight: 600;
   line-height: 90%;
   text-align: center;
@@ -65,7 +65,7 @@ figure {
 }
 
 .content__text-block {
-  font-family: var(--main-font, Raleway, sans-serif);
+  font-family: var(--main-font, sans-serif);
   font-weight: 400;
   font-size: 18px;
 }
@@ -83,7 +83,12 @@ a:focus, button:focus {
 }
 
 a:focus-visible, button:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color, #312A4E);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #999999;
 }
 
 button:disabled {
@@ -91,7 +96,7 @@ button:disabled {
 }
 
 .content__blockquote {
-  font-family: var(--main-font, Raleway, sans-serif);
+  font-family: var(--main-font, sans-serif);
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
@@ -145,7 +150,7 @@ button:disabled {
 }
 
 .content__picture-caption {
-  font-size: var(--main-font, Raleway, sans-serif);
+  font-size: var(--main-font, sans-serif);
   font-weight: 400;
   font-size: 18px;
   text-align: center;
@@ -181,7 +186,7 @@ button:disabled {
 .colored-text::after {
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FFAB6B);
   height: 0.5ch;
   bottom: 0.3ch;
   width: calc(100% + 2 * 5px);
@@ -206,7 +211,7 @@ button:disabled {
 
 .header__theme-toggler {
   display: flex;
-  gap: 8px;
+  gap: 20px;
   padding: 0;
   list-style: none;
 }
@@ -218,10 +223,12 @@ button:disabled {
   cursor: pointer;
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 .header__theme-button_type_dark:hover {
   text-decoration: underline;
+  text-decoration-color: #999999;
 }
 
 .header__theme-button_type_dark:focus {
@@ -230,6 +237,7 @@ button:disabled {
 
 .header__theme-button_type_light:hover {
   text-decoration: underline;
+  text-decoration-color: #999999;
 }
 
 .header__theme-button_type_light:focus {
@@ -244,11 +252,11 @@ button:disabled {
 .header__theme-button_is-active::after {
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FFAB6B);
   height: 0.7ch;
   bottom: 0.1ch;
-  width: calc(100% + 2 * 2px);
-  left: -2px;
+  width: calc(100% + 2 * 4px);
+  left: -5px;
   z-index: -1;
 }
 
@@ -259,7 +267,7 @@ button:disabled {
 }
 
 .footer__copyright {
-  font-family: var(--main-font, Raleway, sans-serif);
+  font-family: var(--main-font, sans-serif);
   font-weight: 400;
   font-size: 18px;
   text-align: center;
